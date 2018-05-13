@@ -151,13 +151,18 @@ public class MapFragmentView {
         GeoBoundingBox boundingBox = new GeoBoundingBox(m_map.getCenter(), 1000, 1000);
         // add boundingbox's four vertices to list of Geocoordinates.
         List<GeoCoordinate> coordinates = new ArrayList<GeoCoordinate>();
-        coordinates.add(boundingBox.getTopLeft());
-        coordinates.add(new GeoCoordinate(boundingBox.getTopLeft().getLatitude(),
-                boundingBox.getBottomRight().getLongitude(),
-                boundingBox.getTopLeft().getAltitude()));
-        coordinates.add(boundingBox.getBottomRight());
-        coordinates.add(new GeoCoordinate(boundingBox.getBottomRight().getLatitude(),
-                boundingBox.getTopLeft().getLongitude(), boundingBox.getTopLeft().getAltitude()));
+        coordinates.add(new GeoCoordinate(43.209100, 76.667896, 0.0));
+        coordinates.add(new GeoCoordinate(43.220797, 76.678797, 0.0));
+        coordinates.add(new GeoCoordinate(43.221153, 76.658364, 0.0));
+        coordinates.add(new GeoCoordinate(43.207600, 76.638291, 0.0));
+        coordinates.add(new GeoCoordinate(43.198720, 76.654830, 0.0));
+//        coordinates.add(boundingBox.getTopLeft());
+//        coordinates.add(new GeoCoordinate(boundingBox.getTopLeft().getLatitude(),
+//                boundingBox.getBottomRight().getLongitude(),
+//                boundingBox.getTopLeft().getAltitude()));
+//        coordinates.add(boundingBox.getBottomRight());
+//        coordinates.add(new GeoCoordinate(boundingBox.getBottomRight().getLatitude(),
+//                boundingBox.getTopLeft().getLongitude(), boundingBox.getTopLeft().getAltitude()));
         // create GeoPolygon with list of GeoCoordinates.
         GeoPolygon geoPolygon = new GeoPolygon(coordinates);
         // create MapPolygon with GeoPolygon.
