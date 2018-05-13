@@ -103,7 +103,7 @@ public class MapFragmentView {
                             /*
                              * Set the map center to the 4350 Still Creek Dr Burnaby BC (no animation).
                              */
-                            m_map.setCenter(new GeoCoordinate(49.259149, -123.008555, 0.0),
+                            m_map.setCenter(new GeoCoordinate(43.2220146, 76.8512485, 0.0),
                                     Map.Animation.NONE);
 
                             /* Set the zoom level to the average between min and max zoom level. */
