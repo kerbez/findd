@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kerbe.findd">
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:hardwareAccelerated="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -22,34 +24,39 @@
             </intent-filter>
         </activity>
 
-        <meta-data android:name="com.here.android.maps.appid"
-            android:value="noLskVAiGS42g7eWK80K"/>
-        <meta-data android:name="com.here.android.maps.apptoken"
-            android:value="NGWQMN_Ba4fESNSUwAq3zA"/>
-        <meta-data android:name="com.here.android.maps.license.key"
-            android:value="XJRSqSxO+1ndCa9r2Ir588Qh9mYaiKM9ihCG8t5fNq67sO5MTaJ9IK+E7LWf7940dNPC/rgERuv9vgKkrutly7pp4o4kO49kAP7O1P4FnG8PfMN3zYc/nkK8hBB8EAeFbAQ04/MHUrMYSTrzRUXeuTz2+iGePZfiq2x6RT6Nssa1FF+TbPEEBiQFchKiuDYEgpiowgMhbBa7x0TK2mf5gQ1SxHlZgcyBME9kRj+KvQJSpZU1yaZgBN0x5pWdYq+zxRi3FxEkqJPorT1y870IcoGqHasgG3fBAgQ+ghKOe7IzZQAnCCez3BjidTItqs+5r+6Htnh3L3EhT0Y7WmwB1EoWXRa7WxEPPaxlcXx9yihz/7Ic4qWdzarzXxrLIfy84lsmSjqGeFPSMxMwFk9h2qmlQe5RHgvILJCJAFNGg3tjMHmeVdYhSsgnQF/qpSPTs0E5tFDYQtfnZWcT/kLvj4tKO9/J1IissfL2bz5HWk2cIYMwzaKqGu959S9/s7TyWVYcmOx438Sj3PqPKy56ZbRp19sgKjpckgcBiK6trvKn9vgi04WQufL94N+e27DURJHuUX0XpVvZxPO7UynYoPpNWlSIvlAuG5aK4YtklCDrE4YPFkSKRqCApvvsT7ViPbDwEIvwsiZoBlctFIcTspk8kG+mStuncqO+xoAyGkI="/>
-
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="noLskVAiGS42g7eWK80K" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="NGWQMN_Ba4fESNSUwAq3zA" />
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="XJRSqSxO+1ndCa9r2Ir588Qh9mYaiKM9ihCG8t5fNq67sO5MTaJ9IK+E7LWf7940dNPC/rgERuv9vgKkrutly7pp4o4kO49kAP7O1P4FnG8PfMN3zYc/nkK8hBB8EAeFbAQ04/MHUrMYSTrzRUXeuTz2+iGePZfiq2x6RT6Nssa1FF+TbPEEBiQFchKiuDYEgpiowgMhbBa7x0TK2mf5gQ1SxHlZgcyBME9kRj+KvQJSpZU1yaZgBN0x5pWdYq+zxRi3FxEkqJPorT1y870IcoGqHasgG3fBAgQ+ghKOe7IzZQAnCCez3BjidTItqs+5r+6Htnh3L3EhT0Y7WmwB1EoWXRa7WxEPPaxlcXx9yihz/7Ic4qWdzarzXxrLIfy84lsmSjqGeFPSMxMwFk9h2qmlQe5RHgvILJCJAFNGg3tjMHmeVdYhSsgnQF/qpSPTs0E5tFDYQtfnZWcT/kLvj4tKO9/J1IissfL2bz5HWk2cIYMwzaKqGu959S9/s7TyWVYcmOx438Sj3PqPKy56ZbRp19sgKjpckgcBiK6trvKn9vgi04WQufL94N+e27DURJHuUX0XpVvZxPO7UynYoPpNWlSIvlAuG5aK4YtklCDrE4YPFkSKRqCApvvsT7ViPbDwEIvwsiZoBlctFIcTspk8kG+mStuncqO+xoAyGkI=" />
         <meta-data
             android:name="INTENT_NAME"
             android:value="{in}" />
 
         <service
             android:name="com.here.android.mpa.service.MapService"
-            android:label="{ln}"
-            android:exported="false">
+            android:exported="false"
+            android:label="{ln}">
             <intent-filter>
-                <action android:name="{in}"></action>
+                <action android:name="{in}" />
             </intent-filter>
         </service>
-        <!--<service-->
-            <!--android:name="com.here.android.mpa.service.MapService"-->
-            <!--android:label="{findd}"-->
-            <!--android:exported="false">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN">-->
-                <!--</action>-->
-            <!--</intent-filter>-->
-        <!--</service>-->
+        <!-- <service -->
+        <!-- android:name="com.here.android.mpa.service.MapService" -->
+        <!-- android:label="{findd}" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN"> -->
+        <!-- </action> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <activity android:name=".Start" />
+        <activity android:name=".Admin" />
+        <activity android:name=".Vol"></activity>
     </application>
 
 </manifest>

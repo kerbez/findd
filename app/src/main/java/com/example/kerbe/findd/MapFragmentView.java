@@ -148,7 +148,7 @@ public class MapFragmentView {
     private void createPolygon() {
         // create an bounding box centered at current cent
         //Log.d("MAP", m_map.getCenter().toString());
-        GeoBoundingBox boundingBox = new GeoBoundingBox(new GeoCoordinate(49.259149, -123.008555, 0.0), 1000, 1000);
+        GeoBoundingBox boundingBox = new GeoBoundingBox(m_map.getCenter(), 1000, 1000);
         // add boundingbox's four vertices to list of Geocoordinates.
         List<GeoCoordinate> coordinates = new ArrayList<GeoCoordinate>();
         coordinates.add(boundingBox.getTopLeft());
