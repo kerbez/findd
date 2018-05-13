@@ -169,7 +169,7 @@ public class MapFragmentView {
         m_polygon = new MapPolygon(geoPolygon);
         // set line color, fill color and line width
         m_polygon.setLineColor(Color.RED);
-        m_polygon.setFillColor(Color.GRAY);
+        m_polygon.setFillColor(Color.argb(50, 80, 0, 0));
         m_polygon.setLineWidth(12);
         // add MapPolygon to map.
         m_map.addMapObject(m_polygon);
